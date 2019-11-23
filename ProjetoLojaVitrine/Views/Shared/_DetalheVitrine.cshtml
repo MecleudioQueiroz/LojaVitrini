@@ -1,0 +1,47 @@
+﻿@model ProjetoLojaVitrine.Models.Produtos
+
+<div >
+    <div class="col-md-3" style="margin-bottom:25px">
+        <div class="thumbnail">
+            <div class="image" style="margin-bottom:20px">
+                <img class="img-responsive" src="@Model.ImagemUrl" width="400" />
+            </div>
+            <div class="caption" style="border-top:3px solid #0094ff">
+                <h3> <a asp-controller="Produto" asp-action="Detalhe" asp-route-produtoId="@Model.ProdutoId">@Model.Nome</a></h3>
+                <h4>@Model.Preco.ToString("c")</h4>
+            </div>
+            <div class="addToCart text-right">
+                <p class="button ">
+                    <a class="btn btn-success" href="@Url.Action("Detalhe", "Produto", new {Model.ProdutoId})">
+                        Detalhar Produto
+                    </a>
+                </p>
+            </div>
+        </div>      
+    </div>  
+</div>
+
+
+
+
+
+@*<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="thumbnail">
+        <img src="@Model.ImagemUrl" width="400" alt="" />
+        <div class="caption">
+            <h3 class="pull-right">@Model.Preco.ToString("c")</h3>
+            <h3>
+                <a asp-controller="Produto" asp-action="Detalhes" asp-route-produtoId="@Model.ProdutoId">@Model.Nome</a>
+            </h3>
+            <p>@Model.DescricaoCurta</p>
+        </div>
+        <div class="addToCart text-right">
+            <p class="button ">
+                <a class="btn btn-success" href="@Url.Action("Detalhe", "Produto", new {Model.ProdutoId})">
+                    Detalhar Produto
+                </a>
+            </p>
+        </div>
+    </div>
+</div>*@
+

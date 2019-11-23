@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProjetoLojaVitrine.Models.Produtos>
+@{
+    ViewBag.Title = "ListarProdutos";
+}
+
+
+<h2>Listar Produtos</h2>
+<p>
+    <button class="btn btn-success create">@Html.ActionLink("Add Produto", "NovoProduto")</button>
+</p>
+<table class="table table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x => x.ProdutoId)</th>
+            <th>@Html.DisplayNameFor(x => x.Nome)</th>
+            <th>@Html.DisplayNameFor(x => x.DescricaoCurta)</th>
+            <th>@Html.DisplayNameFor(x => x.DescricaoLonga)</th>
+            <th>@Html.DisplayNameFor(x => x.Preco)</th>
+            <th>@Html.DisplayNameFor(x => x.CategoriaId)</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(c => item.ProdutoId)</td>
+            <td>@Html.DisplayFor(a => item.Nome)</td>
+            <td>@Html.DisplayFor(d => item.DescricaoCurta)</td>
+            <td>@Html.DisplayFor(e => item.DescricaoLonga)</td>
+            <td>@Html.DisplayFor(f => item.Preco)</td>
+            <td>@Html.DisplayFor(g => item.Categoria.CategoriaId) - @Html.DisplayFor(h => item.Categoria.NomeCategoria)</td>
+            <td>
+                <a class="btn btn-default btn-sm" href="@Url.Action("EditarProduto", "Produto", new {item.ProdutoId})"><i class="glyphicon glyphicon-pencil"></i></a>
+                <a class="btn btn-default btn-sm" href="@Url.Action("Detalhe", "Produto", new {item.ProdutoId})"><i class="glyphicon glyphicon-book"></i></a>
+                <a class="btn btn-default btn-sm" href="@Url.Action("ExcluirProduto", "Produto", new {item.ProdutoId})"><i class="glyphicon glyphicon-floppy-remove"></i></a>
+
+            </td>
+        </tr>
+    }
+</table>
+

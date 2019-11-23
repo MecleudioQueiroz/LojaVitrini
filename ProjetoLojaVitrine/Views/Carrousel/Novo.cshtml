@@ -1,0 +1,24 @@
+﻿@model ProjetoLojaVitrine.Models.Produtos
+
+@{
+    ViewBag.Title = "Cadastrar Novo Carrousel";
+}
+
+<h2>Novo Carrousel</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form id="NovoPost" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
+                <label>Descricao</label><br />
+                <input id="Descricao" name="Descricao" class="form-control" />
+           
+                <input id="Imagefile" name="Imagefile" class="form-control" type="file" />
+
+                <input type="submit" name="salvar" class="btn btn-success" value="Salvar" />
+            </form>
+        </div>
+    </div>
+</div>
+
+

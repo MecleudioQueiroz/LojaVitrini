@@ -1,0 +1,108 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import "http://fontawesome.io/assets/font-awesome/css/font-awesome.css";
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+@import url('font-awesome.css');
+@import url('font-awesome.min.css');
+
+
+
+.metro {
+width: 1000px;
+margin:07% auto 0px;
+list-style: none;
+position:static;
+
+}
+
+.metro li {
+cursor: default;
+position: relative;
+text-align: center;
+margin: 0 10px 10px 0;
+width: 150px;
+height: 150px;
+color: #ffffff;
+float: left;
+cursor:pointer;
+}
+
+.metro li i {
+font-size: 54px;
+margin: 35px 0 0;
+}
+
+.metro li span {
+color: rgba(255, 255, 255, 0.8);
+text-transform: uppercase;
+position: absolute;
+left: 15px;
+bottom: 15px;
+font-size: 14px;
+}
+
+.metro li:first-child {
+background: #00b6de;
+}
+
+.metro li:nth-child(2) {
+background: #56dea7;
+/*width: 310px;*/
+}
+
+.metro li:nth-child(3) {
+background: #ff7659;
+/*margin: 0;*/
+}
+
+.metro li:nth-child(4) {
+background: #f8cd36;
+}
+
+.metro li:nth-child(5) {
+background: #f26175;
+}
+
+.metro li:nth-child(6) {
+background: #5ca7df;
+}
+
+.metro li:last-child {
+background: #9e7ac2;
+/*margin: 0;*/
+}
+
+/*efeito botao ao clicar*/
+.metro li:nth-child(5):active, .metro li:first-child:active {
+-webkit-transform: scale(0.95);
+-ms-transform: scale(0.95);
+transform: scale(0.95);
+}
+
+/*efeito botao ao clicar*/
+.metro li:nth-child(7):active, .metro li:nth-child(2):active {
+-webkit-transform: perspective(600px) rotate3d(1, 0, 0, -10deg);
+-ms-transform: perspective(600px) rotate3d(1, 0, 0, -10deg);
+transform: perspective(600px) rotate3d(1, 0, 0, -10deg);
+}
+
+/*efeito botao ao clicar*/
+.metro li:nth-child(3):active {
+-webkit-transform: perspective(600px) rotate3d(0, 1, 0, 10deg);
+-ms-transform: perspective(600px) rotate3d(0, 1, 0, 10deg);
+transform: perspective(600px) rotate3d(0, 1, 0, 10deg);
+}
+
+/*efeito botao ao clicar*/
+.metro li:nth-child(4):active {
+-webkit-transform: perspective(600px) rotate3d(0, 1, 0, -10deg);
+-ms-transform: perspective(600px) rotate3d(0, 1, 0, -10deg);
+transform: perspective(600px) rotate3d(0, 1, 0, -10deg);
+}
+
+/*efeito botao ao clicar*/
+.metro li:nth-child(6):active {
+-webkit-transform: perspective(600px) rotate3d(1, 0, 0, 10deg);
+-ms-transform: perspective(600px) rotate3d(1, 0, 0, 10deg);
+transform: perspective(600px) rotate3d(1, 0, 0, 10deg);
+}

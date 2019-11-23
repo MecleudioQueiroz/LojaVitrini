@@ -1,0 +1,31 @@
+﻿@model ProjetoLojaVitrine.Administrativo.Models.Usuario
+@{
+    ViewBag.Title = "Editar Usuario";
+}
+
+<h2>Editar Usuario</h2>
+
+<div>
+    <hr />
+    <div class="form-horizontal">
+        <dl>
+            <dt>@Html.LabelFor(x => x.Nome, new { @class = "control-label col-md-2"})</dt>
+            <dd>@Html.TextBoxFor(x => x.Nome, new { @class = "form-control"})</dd>
+
+            <dt>@Html.LabelFor(x => x.senha, new { @class = "control-label col-md-2"})</dt>
+            <dd>@Html.TextBoxFor(x => x.senha, new { @class = "form-control"})</dd>
+
+            <dt>@Html.LabelFor(x => x.repitaSenha, new { @class = "control-label col-md-2"})</dt>
+            <dd>@Html.TextBoxFor(x => x.repitaSenha, new { @class = "form-control"})</dd>
+        </dl>      
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken();
+
+        <div>
+            <input type="submit" value="EditarUsuaio" class="btn btn-sm" />
+        </div>
+    }
+</div>

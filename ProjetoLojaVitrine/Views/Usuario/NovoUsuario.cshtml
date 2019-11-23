@@ -1,0 +1,22 @@
+﻿@model ProjetoLojaVitrine.Administrativo.Models.Usuario
+@{
+    ViewBag.Title = "Novo Usuario";
+}
+
+<h2>Novo Usuario</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(x => x.Nome)
+        @Html.TextBoxFor(x => x.Nome, new { @class = "form-control"})
+
+        @Html.LabelFor(x => x.senha)
+        @Html.TextBoxFor(x => x.senha, new { @class = "form-control"})
+
+        @Html.LabelFor(x => x.repitaSenha)
+        @Html.TextBoxFor(x => x.repitaSenha, new { @class = "form-control"})
+    </div><br />
+
+   <input type="submit" name="salvar" class="btn btn-success" value="Salvar" />
+}

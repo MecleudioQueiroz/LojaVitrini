@@ -1,0 +1,80 @@
+﻿@model ProjetoLojaVitrine.Models.Produtos
+
+@{
+    ViewBag.Title = "Novo Produto";
+}
+
+<h2>Insira os dados do Produto</h2>
+
+@using (Html.BeginForm("NovoProduto", "Produto", FormMethod.Post,  new { encType = "multipart/form-data"}))
+{
+<div class="form-group">
+    @Html.LabelFor(x => x.Nome)
+    @Html.TextBoxFor(x => x.Nome, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.DescricaoCurta)
+    @Html.TextBoxFor(x => x.DescricaoCurta, new { @class = "form-control" })
+
+    @Html.TextAreaFor(model => model.DescricaoLonga, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.DescricaoLonga)
+    @Html.TextBoxFor(x => x.DescricaoLonga, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.Preco)
+    @Html.TextBoxFor(x => x.Preco, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.Categoria)
+    @Html.DropDownListFor(model => model.Categoria.CategoriaId, ViewBag.CategoriaId as SelectList, string.Empty, new { @class = "form-control" })
+    <br />
+    @*@Html.LabelFor(x => x.ImagemUrl)
+    @Html.TextBoxFor(x => x.Imagefile, new { type = "file" })*@
+
+    <div class="upload-btn-wrapper">
+        <button class="btn">Upload a file</button>
+        <input id="Imagefile" type="file" name="Imagefile" />
+    </div>
+
+    <div class="upload-btn-wrapper">
+        <input type="submit" name="salvar" class="btn btn-success" value="Salvar" />
+        <input type="submit" name="cancelar" class="btn btn-danger" value="Cancelar" />
+    </div>
+</div>
+    @*<input type="submit" name="salvar" class="btn btn-success" value="Salvar" />*@
+}
+
+<style>
+    .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .btn {
+        border: 2px solid gray;
+        color: gray;
+        background-color: white;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .upload-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+</style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Rich Text Editor (CKEditor) Configuration
+            CKEDITOR.replace(
+                idRichTextEditor, {
+                    language: 'fr'
+                }
+            );
+        });
+    </script>

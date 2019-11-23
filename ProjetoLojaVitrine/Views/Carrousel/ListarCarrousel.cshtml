@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ProjetoLojaVitrine.Models.Carrousel>
+
+@{
+    ViewBag.Title = "ListarCarrousel";
+}
+
+<h2>Listar Carrousel</h2><br />
+                         <a class="btn btn-primary" href="@Url.Action("Novo","Carrousel")"><i class="glyphicon glyphicon-plus"></i> Add Carrousel</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x => x.Descricao)</th>
+            <th>@Html.DisplayNameFor(x => x.ImagePah)</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(x => item.Descricao)</td>
+
+            <td>
+                <img src="@Url.Content(item.ImagePah)" style="max-width:200px; max-height:200px;" />
+            </td>
+
+
+            <td>
+                @*<a class="btn btn-primary" href="@Url.Action("Novo","Carrousel", new { item.Id})"><i class="glyphicon glyphicon-plus"></i></a>*@
+                <a class="btn btn-danger" href="@Url.Action("ExcluirCarrousel","Carrousel", new {item.Id})"><i class="glyphicon glyphicon-remove"></i></a>
+
+            </td>
+        </tr>
+    }
+</table>

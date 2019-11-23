@@ -1,0 +1,24 @@
+﻿@model ProjetoLojaVitrine.Models.Categoria
+@{
+    ViewBag.Title = "Nova Categoria";
+}
+
+<h2>Preencha os Dados Abaixo</h2>
+<br />
+
+@using (Html.BeginForm())
+{
+    <div>
+
+        @Html.LabelFor(x => x.NomeCategoria)
+        @Html.TextBoxFor(x => x.NomeCategoria, new { @class = "form-control"})
+
+        @Html.LabelFor(x => x.Descricao)
+        @Html.TextBoxFor(x => x.Descricao, new { @class = "form-control"})
+
+    </div>
+
+    <input type="submit" name="salvar" class="btn btn-success" value="Salvar" />
+}
+
+

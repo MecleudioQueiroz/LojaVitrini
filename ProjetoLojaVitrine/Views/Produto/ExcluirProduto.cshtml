@@ -1,0 +1,66 @@
+﻿@model ProjetoLojaVitrine.Models.Produtos
+
+@{
+    ViewBag.Title = "Excluir Produto";
+}
+
+
+<div class="form-actions no-color">
+        <h3 class="p-3 mb-2 bg-danger" style="color:#0094ff">Deseja deletar o produto ?</h3>
+    </div>
+
+    <div>
+        <div class="col-md-3" style="margin-bottom:25px">
+            <div class="thumbnail">
+                <div class="image" style="margin-bottom:20px">
+                    <img class="img-responsive" src="@Model.ImagemUrl" width="400" />
+                </div>
+
+                <div class="addToCart text-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <div>
+                @Html.LabelFor(x => x.Nome)
+                @Html.DisplayFor(x => x.Nome, new { @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.DescricaoCurta)
+                @Html.DisplayFor(x => x.DescricaoCurta, new { @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.DescricaoLonga)
+                @Html.DisplayFor(x => x.DescricaoLonga, new { @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.Preco)
+                @Html.DisplayFor(x => x.Preco, new { @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.Categoria)
+                @Html.DisplayFor(model => model.Categoria.NomeCategoria, new { @class = "form-control" })
+            </div>
+
+        </div><br />
+
+
+        <div>
+            <p class="button ">
+                <input type="submit" value="Deletar" class="btn btn-danger" />
+            </p>
+        </div>
+    }
+

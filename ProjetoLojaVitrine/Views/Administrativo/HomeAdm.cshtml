@@ -1,0 +1,44 @@
+﻿
+@{
+//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Area Administrativa</title>
+    <link href="/Content/botoesMenuAdm.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <div class="form-horizontal">
+        <ul class="form-group metro">
+            <li><i class="fa fa-user"></i><span>@Html.ActionLink("Usuario", "ListarUsuario", "Usuario", null, new { @style = "color:#ffffff;" })</span></li>
+            <li><i class="fa fa-barcode"></i><span>@Html.ActionLink("Categoria", "Listar", "Categoria", null, new { @style = "color:#ffffff;" })</span></li>
+            <li><i class="fa fa-shopping-cart"></i><span>@Html.ActionLink("Produto", "ListarProdutos", "Produto", null, new { @style = "color:#ffffff;" })</span></li>
+            <li><i class="fa fa-newspaper-o"></i><span>Destaque</span></li>
+            <li><i class="fa fa-desktop"></i><span>@Html.ActionLink("Carrousel", "ListarCarrousel", "Carrousel", null, new { @style = "color:#ffffff;" })</span></li>
+            <li><i class="fa fa-heart-o"></i><span>Quem Somos</span></li>
+            <li><i class="fa fa-picture-o"></i><span>Galeria</span></li>
+        </ul>
+    </div>
+
+
+    @if (Session["Nome"] != null)
+    {
+        <text>
+            <h3> Bem Vindo @Session["Nome"].ToString() </h3>
+        </text>
+    }
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+

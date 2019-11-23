@@ -1,0 +1,146 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ /*Carousel 
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+/*Carrousel*/
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(1, 1);
+    }
+
+    to {
+        -webkit-transform: scale(1.5, 1.5);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+.carousel-inner .item > img {
+    -webkit-animation: zoom 20s;
+    animation: zoom 20s;
+}
+
+/* Footer */
+
+footer {
+    background: #333 url("../img/footer-back.png") repeat;
+    border-top: 3px solid #ddd;
+    box-shadow: inset 0px 0px 3px #111;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 35px 0px 10px 0px;
+}
+
+    footer a {
+        color: #eee;
+        text-decoration: none;
+        border-bottom: 1px dotted #888;
+    }
+
+        footer a:hover {
+            color: #aaa;
+            text-decoration: none;
+            border: 0px;
+        }
+
+    footer hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-top: #000 1px solid;
+        border-bottom: #212121 1px solid;
+    }
+
+    footer .social {
+        margin-top: 10px;
+    }
+
+        footer .social a i {
+            width: 30px;
+            height: 30px;
+            font-size: 13px !important;
+            line-height: 30px;
+            box-shadow: 1px 1px 3px #000;
+        }
+
+    footer .fwidget {
+        font-style: italic;
+        margin-bottom: 30px;
+    }
+
+        footer .fwidget h4 {
+            font-size: 26px;
+            color: #eee;
+            font-style: normal;
+        }
+
+        footer .fwidget ul {
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style-type: none;
+        }
+
+            footer .fwidget ul li {
+                margin-bottom: 10px;
+            }
+
+    footer i.contact-icon {
+        background: #228b22;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 100px;
+        color: #fff;
+        font-size: 12px;
+        margin-right: 7px;
+    }
+
+    footer .address p {
+        margin-bottom: 6px;
+    }
+
+    footer .copy {
+        font-size: 13px;
+        margin: 15px 0px;
+    }
+
+
