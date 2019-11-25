@@ -4,21 +4,74 @@
     ViewBag.Title = "Cadastrar Novo Carrousel";
 }
 
-<h2>Novo Carrousel</h2>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <form id="NovoPost" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
-                <label>Descricao</label><br />
-                <input id="Descricao" name="Descricao" class="form-control" />
-           
-                <input id="Imagefile" name="Imagefile" class="form-control" type="file" />
+<br />
+<div class="panel panel-primary">
+    <div class="panel-heading"  align="left">
+        <h4> Novo Carrousel</h4>
+    </div>
+    <div class="container">
+        <div class="row"><br />
+            <div class="col-md-9">
+                <form id="NovoPost" method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
+                    <label>Descricao</label><br />
+                    <input id="Descricao" name="Descricao" class="form-control" /><br />
 
-                <input type="submit" name="salvar" class="btn btn-success" value="Salvar" />
-            </form>
+                    <div class="upload-btn-wrapper">
+                        <button class="btn">Upload a file</button>
+                        <input id="Imagefile" type="file" name="Imagefile" />
+                    </div>
+
+                    <div class="upload-btn-wrapper">
+                        <input type="submit" name="salvar" class="btn btn-success" value="Salvar" />
+                        <input type="submit" name="cancelar" class="btn btn-danger" value="Cancelar" />
+                    </div><br /><br />
+
+                    <div class="alert alert-warning" role="alert">
+                        <a class="alert-dismissible">Tamanho da imagem deve ser de 1350 x 450</a>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
+
 </div>
 
 
+<style>
+    .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .btn {
+        border: 2px solid gray;
+        color: gray;
+        background-color: white;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .upload-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Rich Text Editor (CKEditor) Configuration
+        CKEDITOR.replace(
+            idRichTextEditor, {
+                language: 'fr'
+            }
+        );
+    });
+</script>

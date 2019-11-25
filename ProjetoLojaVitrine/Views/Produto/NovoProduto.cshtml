@@ -26,8 +26,7 @@
     @Html.LabelFor(x => x.Categoria)
     @Html.DropDownListFor(model => model.Categoria.CategoriaId, ViewBag.CategoriaId as SelectList, string.Empty, new { @class = "form-control" })
     <br />
-    @*@Html.LabelFor(x => x.ImagemUrl)
-    @Html.TextBoxFor(x => x.Imagefile, new { type = "file" })*@
+   
 
     <div class="upload-btn-wrapper">
         <button class="btn">Upload a file</button>

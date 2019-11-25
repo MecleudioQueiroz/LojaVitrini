@@ -1,17 +1,17 @@
 ﻿@model ProjetoLojaVitrine.ViewsModel.ProCatCarrListView
 
 
-@Html.Partial("_Carrousel", Model.BuscarCarrousel)
+@Html.Partial("_Carrousel", Model.BuscarCarrousel)<br />
 
+@Html.Partial("_BotoesProdutosInicial")<br />
 
 
 @*<div class="col-md-3">
         @Html.Partial("_MenuLateralCategoria")
     </div>*@
-    @foreach (var produto in Model.BuscarProduto)
-    {
-        @Html.Partial("_DetalheVitrine", produto)
-    }
+@foreach (var produto in Model.BuscarProduto)
+{
+    @Html.Partial("_DetalheVitrine", produto)
+}
 <br />
-@Html.Partial("_CarrouselProdutos");
 

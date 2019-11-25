@@ -182,6 +182,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\bijuterias.jpg" />
+    <Content Include="images\indiana.jpg" />
+    <Content Include="images\sexshop.png" />
+    <Content Include="images\Tabacaria.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -235,11 +239,10 @@
     <Content Include="Views\Usuario\ExcluirUsuario.cshtml" />
     <Content Include="Views\Usuario\EditarUsuario.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
-    <Content Include="Views\Shared\_CarrouselProdutos.cshtml" />
+    <Content Include="Views\Shared\_BotoesProdutosInicial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

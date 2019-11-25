@@ -189,7 +189,17 @@
                 <li><a href="#">Logout</a></li>
                 <li>@Html.ActionLink("Area Administrativo", "HomeAdm", "Administrativo")</li>i>
                 <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li>
+
+                    @if (Session["Nome"] != null)
+                    {
+                   
+                        <i class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></i>
+
+                        <h3 class="text-primary text-center"> @Session["Nome"].ToString() </h3>
+
+                    }
+                </li>
             </ul>
         </li>
     </ul>
